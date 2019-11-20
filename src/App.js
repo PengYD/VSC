@@ -1,24 +1,23 @@
 import React from 'react';
+import 'antd/dist/antd.css';
+import { Row, Col } from 'antd';
+import Hello from './page/Hello.js';
 import './css/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      <title>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</title>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://www.bilibili.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Bilibili
-        </a>
-      </header>
-    </div>
+    <div className="gutter-example">
+    <Row gutter={16}>
+      <Col className="gutter-row" span={12}>
+        <div className="gutter-box"><Hello></Hello></div>
+      </Col>
+    </Row>
+    <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, 20]}>
+      <Col className="gutter-row" span={24}>
+        <div className="gutter-box">col-6</div>
+      </Col>
+    </Row>
+  </div>
   );
 }
 
